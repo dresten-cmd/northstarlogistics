@@ -38,3 +38,40 @@ blockquote {
     padding-left: 1em;
     margin: 1.5em 0;
 }
+.services-content {
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5em;
+    margin: 2em 0;
+}
+.service-item {
+    background: #f8f8f8;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid #003366;
+}
+.service-item h4 {
+    color: #003366;
+    margin-top: 0;
+}
+.gallery {
+    text-align: center;
+    margin: 3em 0;
+}
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+.gallery-images img {
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
