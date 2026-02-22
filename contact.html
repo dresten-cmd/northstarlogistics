@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Virtual Trucking Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Trucking Company</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Get in Touch</h2>
+            <p>Ready to join the fleet or have questions? We're just a message away.</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <h3>Reach Out</h3>
+                <ul>
+                    <li><strong>Discord (Recommended):</strong> Join our server for instant chat, applications, and convoys → <a href="https://discord.gg/your-invite-link" target="_blank">discord.gg/VirtualTruckingCo</a> (replace with your real invite)</li>
+                    <li><strong>Email:</strong> <a href="mailto:recruitment@virtualtruckingco.com">recruitment@virtualtruckingco.com</a></li>
+                    <li><strong>Location (HQ):</strong> Bloomington, Minnesota, USA</li>
+                </ul>
+                <p>Most new drivers apply via Discord — it's fast and lets us chat about your experience, truck setup, and availability.</p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Driver Application / General Inquiry</h3>
+                <form action="https://formspree.io/f/your-formspree-id" method="POST">
+                    <!-- Replace the action URL with your Formspree endpoint after signing up at formspree.io -->
+                    <label for="name">Your Name / In-Game Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="discord">Discord Username (if different):</label>
+                    <input type="text" id="discord" name="discord">
+
+                    <label for="experience">Trucking Experience (ATS/ETS2 hours or years):</label>
+                    <textarea id="experience" name="experience" rows="4" required placeholder="e.g., 500+ hours in ATS, own all DLCs, comfortable with realistic physics..."></textarea>
+
+                    <label for="message">Message / Questions:</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Tell us why you'd like to join VTC or any questions you have!"></textarea>
+
+                    <!-- Honeypot for spam protection (leave empty) -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <p><small>We'll get back to you within 24-48 hours. Applications are reviewed quickly!</small></p
