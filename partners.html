@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Partners – North Star Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Partners-specific styles – can move to style.css */
+    .partners-intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      font-size: 1.2rem;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .partner-card {
+      background: var(--dark);
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      border: 1px solid #444;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    }
+
+    .partner-logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--gold);
+      background: #111; /* fallback if no image */
+    }
+
+    .partner-card h3 {
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      font-size: 1.7rem;
+    }
+
+    .partner-card .since {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .partner-card p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .partner-link {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.8rem 1.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition:
