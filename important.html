@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Important Links & Resources – North Star Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Links-page specific styles – can move to style.css */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .resource-card {
+      background: var(--dark);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #444;
+      transition: all 0.3s;
+    }
+
+    .resource-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(212,175,55,0.15);
+    }
+
+    .resource-card h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .resource-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .resource-card li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .resource-card a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .resource-card a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      background: rgba(212,175,55,0.08);
+      padding: 1.2rem;
+      border-left: 5px solid var(--gold);
+      border-radius: 6px;
+      margin: 2rem 0;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">North Star Logistics</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="staff.html">Staff</a
