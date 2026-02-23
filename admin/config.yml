@@ -1,22 +1,27 @@
 backend:
   name: git-gateway
-  branch: main           # or master / your default branch
+  branch: main                  # change if your branch is 'master' etc.
 
-local_backend: true      # optional: enables local dev mode
+# Optional: limit who can access CMS (after Identity setup)
+auth:
+  identity_url: /.netlify/identity   # usually auto-detected
 
-media_folder: "images/news"   # where uploaded images go
+media_folder: "images/news"          # uploaded images go here
 public_folder: "/images/news"
 
 collections:
   - name: "news"
     label: "News Articles"
-    folder: "content/news"      # markdown files will be saved here
-    create: true
+    folder: "content/news"           # .md files saved here
+    create: true                     # allow creating new articles
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false                 # no live preview needed for simple site
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
       - {label: "Author", name: "author", widget: "string", default: "Dispatch Team"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
       - {label: "Tags", name: "tags", widget: "list", default: ["announcement"]}
