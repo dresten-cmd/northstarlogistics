@@ -49,3 +49,56 @@
 
 </body>
 </html>
+---
+import { getCollection } from 'astro:content';
+
+// Get all news articles, sorted newest first
+const allNews = await getCollection('news');
+const sortedNews = allNews.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<html lang="en">
+  <head>
+    <!-- Your meta, title, etc. -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>News – North Star Logistics</title>
+  </head>
+  <body>
+    <header>
+      <!-- same header as other pages -->
+      <a href="/" class="logo">North Star Logistics</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/news" class="active">News</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Latest News</h2>
+      {sortedNews.length === 0 && <p>No news yet. Check back soon!</p>}
+
+      {sortedNews.map((post) => (
+        <article style="margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #333;">
+          <h3 style="color: var(--gold);">{post.data.title}</h3>
+          <p>
+            <small>{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</small>
+            • {post.data.author}
+          </p>
+          {post.data.image && <img src={post.data.image} alt="" style="max-width:100%; border-radius:8px;" />}
+          <div set:html={post.body} />  <!-- Renders the Markdown body as HTML -->
+        </article>
+      ))}
+    </section>
+
+    <!-- footer -->
+  </body>
+</html>
+
+<style is:global>
+  /* Your CSS import or inline if needed */
+</style>
