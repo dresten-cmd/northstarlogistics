@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Staff – North Star Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Staff-specific styles (add to your existing style.css or keep inline here) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .team-card {
+      background: var(--dark);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #444;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    }
+
+    .team-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.2rem;
+      border: 3px solid var(--gold);
+    }
+
+    .team-card h3 {
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .role {
+      color: var(--gray);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .team-card p {
+      font-size: 1rem;
+      color: var(--light);
+    }
+
+    @media (max-width: 768px)
