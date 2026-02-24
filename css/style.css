@@ -41,16 +41,26 @@ header {
   letter-spacing: 1px;
 }
 
-nav a {
-  color: var(--light);
-  text-decoration: none;
-  margin-left: 2.2rem;
-  font-weight: 500;
-  transition: color 0.25s;
-}
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News</a>
+  <a href="staff.html">Staff</a>
+  <a href="rules.html">Rules</a>
 
-nav a:hover,
-nav a.active {
+  <!-- Dropdown example: Resources becomes parent -->
+  <div class="dropdown">
+    <a href="important-links.html" class="dropbtn">Resources ▼</a>
+    <div class="dropdown-content">
+      <a href="important-links.html">Important Links</a>
+      <a href="partners.html">Partners</a>
+      <!-- Add more sub-items here as needed -->
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <a href="contact.html">Contact</a>
+</nav>
   color: var(--gold);
 }
 
