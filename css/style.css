@@ -42,24 +42,84 @@ header {
 }
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="news.html">News</a>
-  <a href="staff.html">Staff</a>
-  <a href="rules.html">Rules</a>
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  <!-- Dropdown example: Resources becomes parent -->
-  <div class="dropdown">
-    <a href="important-links.html" class="dropbtn">Resources ▼</a>
-    <div class="dropdown-content">
-      <a href="important-links.html">Important Links</a>
-      <a href="partners.html">Partners</a>
-      <!-- Add more sub-items here as needed -->
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </div>
+.dropbtn {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;               /* matches your existing nav spacing */
+  font-family: inherit;     /* keeps Viga font */
+  font-size: inherit;
+}
 
-  <a href="contact.html">Contact</a>
+.dropbtn:hover,
+.dropbtn:focus {
+  color: var(--gold);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--dark);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 999;             /* stays above other content */
+  top: 100%;                /* appears below the parent link */
+  left: 0;
+  margin-top: 8px;          /* small gap from parent */
+  border: 1px solid #444;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--light);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+  background: #222;
+  color: var(--gold);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Active state for the parent when dropdown is open */
+.dropdown:hover .dropbtn {
+  color: var(--gold);
+}
+
+/* Mobile/responsive adjustment (basic) */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;       /* stacks instead of absolute on small screens */
+    box-shadow: none;
+    border: none;
+    background: #111;
+    margin: 0;
+  }
+  
+  .dropdown-content a {
+    padding: 14px 20px;
+  }
+}
 </nav>
   color: var(--gold);
 }
